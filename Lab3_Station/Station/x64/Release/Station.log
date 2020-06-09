@@ -1,0 +1,21 @@
+﻿  car.cpp
+  fuel.cpp
+  main.cpp
+  menu.cpp
+  output_data.cpp
+  price.cpp
+  simulation.cpp
+C:\Users\Alexander\Desktop\Station\Station\simulation.cpp(4,67): warning C4244: 'argument': conversion from '_Rep' to 'unsigned int', possible loss of data
+          with
+          [
+              _Rep=std::chrono::system_clock::rep
+          ]
+  spreader.cpp
+  station.cpp
+  storage.cpp
+  Generating code
+  87 of 1522 functions ( 5.7%) were compiled, the rest were copied from previous compilation.
+    21 functions were new in current compilation
+    49 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Station.vcxproj -> C:\Users\Alexander\Desktop\Station\x64\Release\Station.exe

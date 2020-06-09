@@ -1,0 +1,10 @@
+﻿  List.cpp
+  main.cpp
+d:\универ\2 курс\oop\examproject\examproject\examproject\sortings.cpp(71): error C2039: getSelectionSort: не является членом "Sortings<Element>"
+  d:\универ\2 курс\oop\examproject\examproject\examproject\sortings.cpp(70): note:  см. объявление "Sortings<Element>"
+d:\универ\2 курс\oop\examproject\examproject\examproject\sortings.cpp(71): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+  Sortings.cpp
+d:\универ\2 курс\oop\examproject\examproject\examproject\sortings.cpp(71): error C2039: getSelectionSort: не является членом "Sortings<Element>"
+  d:\универ\2 курс\oop\examproject\examproject\examproject\sortings.cpp(70): note:  см. объявление "Sortings<Element>"
+d:\универ\2 курс\oop\examproject\examproject\examproject\sortings.cpp(71): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+  Создание кода...
