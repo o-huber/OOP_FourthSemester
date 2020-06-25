@@ -85,11 +85,13 @@ int menu(){
         }
         else if (temp == 7)
         {
-            auto time = matrixC.multiplyParallel(matrixA, matrixB);
+            int *min =  new int;
+            auto time = matrixC.multiplyParallel(matrixA, matrixB, min);
             std::cout<<"Parallel algorithm :"<<time<<" microseconds"<<std::endl;
-
-            time = matrixC.multiply(matrixA, matrixB);
+            time = matrixC.multiply(matrixA, matrixB, min);
             std::cout<<"Standart algorithm :"<<time<<" microseconds"<<std::endl;
+            cout << "Minimal element of multiplied matrixes is " << *min << std::endl;
+            delete min;
         }
         else if (temp == 8)
         {

@@ -57,17 +57,6 @@ void Matrix::display()
     }
 }
 
-void Matrix::fromFile(std::string name)
-{
-    std::ifstream fileA;
-    fileA.open(name);
-    int temp, count = 0;
-    while (fileA >> temp && count < n*n)
-    {
-        this->arr[count / n][count % n] = temp;
-        count++;
-    }
-}
 
 /**
      * function to multiply matrix, if temp==-1 standart multiply, else multiply 1/maxThread of matrix
@@ -76,7 +65,7 @@ void Matrix::fromFile(std::string name)
      * @param temp contains info about which thread is used
      * @return execution time
      */
-long long int Matrix::multiply(Matrix A, Matrix B, int temp)
+long long int Matrix::multiply(Matrix A, Matrix B, int* min,  int temp)
 {
     if ((A.getN() == B.getN()) && (A.getN() == n))
     {
@@ -105,7 +94,10 @@ long long int Matrix::multiply(Matrix A, Matrix B, int temp)
                 i += maxThread;
             }
         }
-
+        *min = arr[0][0];
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                if (arr[i][j] < *min) *min = arr[i][j];
         auto e2 = std::chrono::steady_clock::now();
         return std::chrono::duration_cast<std::chrono::microseconds>(e2 - b2).count();
     }
