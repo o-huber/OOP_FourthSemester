@@ -26,11 +26,7 @@ public:
      * function to get matrix from file
      * @param name contains file path
      */
-    void fromFile(std::string name);
-    /**
-     * function to return n
-     * @return count of rows and colums
-     */
+
     unsigned int getN();
     /**
      * function to creating matrix from console
@@ -47,14 +43,14 @@ public:
      * @param temp contains info about which thread is used
      * @return execution time
      */
-    long long int multiply(Matrix A, Matrix B, int temp = -1);
+    long long int multiply(Matrix A, Matrix B, int* = nullptr, int temp = -1);
     /**
      * fuction to ctart parralel multiplying
      * @param A first matrix
      * @param B second matrix
      * @return execution time
      */
-    long long int multiplyParallel(Matrix A, Matrix B);
+    long long int multiplyParallel(Matrix A, Matrix B, int*);
 
 };
 extern unsigned int maxThread;
